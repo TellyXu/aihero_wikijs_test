@@ -20,16 +20,29 @@ port: 3000
 # - mssql = MS SQL Server 2012 or later
 # - sqlite = SQLite 3.9 or later
 
+
+#postgresql://db_aihe_user:ITlqzUJiYMUTJ4tmHX06udg3R8jMLgAY@dpg-cr9a3ujv2p9s73b4b650-a.virginia-postgres.render.com/db_aihe
+#db:
+#  type: postgres
+
+  # PostgreSQL / MySQL / MariaDB / MS SQL Server only:
+#  host: localhost
+#  port: 5432
+#  user: tellyxu
+#  pass: 88888888Aa
+#  db: wiki
+#  ssl: false
+
 db:
   type: postgres
 
   # PostgreSQL / MySQL / MariaDB / MS SQL Server only:
-  host: localhost
+  host: dpg-cr9a3ujv2p9s73b4b650-a.virginia-postgres.render.com
   port: 5432
-  user: tellyxu
-  pass: 88888888Aa
-  db: wiki
-  ssl: false
+  user: db_aihe_user
+  pass: ITlqzUJiYMUTJ4tmHX06udg3R8jMLgAY
+  db: db_aihe
+  ssl: true
 
   # Optional - PostgreSQL / MySQL / MariaDB only:
   # -> Uncomment lines you need below and set `auto` to false
@@ -47,7 +60,7 @@ db:
   schema: public
 
   # SQLite only:
-  storage: path/to/database.sqlite
+  # storage: path/to/database.sqlite
 
 #######################################################################
 # ADVANCED OPTIONS                                                    #
